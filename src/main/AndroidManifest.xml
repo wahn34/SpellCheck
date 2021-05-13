@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rwan.spellproject">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ico_spell"
+        android:label="맞춤법 검사기"
+        android:roundIcon="@drawable/ico_spell"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ChartActivity" />
+        <activity android:name=".SettingsActivity" />
+
+        <service
+            android:name=".SpellService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="사용자 환경 구성" />
+        <activity
+            android:name=".SpellLogActivity"
+            android:label="사용자 기록" />
+        <activity
+            android:name=".PopSpellActivity"
+            android:label="맞춤법 검사"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PopActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SpellCheckActivity"
+            android:label="맞춤법 검사" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
