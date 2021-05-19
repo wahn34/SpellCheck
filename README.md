@@ -39,9 +39,34 @@ SpellCheck는  [네이버 맞춤법검사기][naverlink]의 데이터로 제공�
 <br/>
 
 
-
 # 사용 라이브러리
 https://github.com/blackfizz/EazeGraph
+
+# 수정 필요
+사용자 데이터는 내부 SQLite와 AWS EC2 환경의 Oracle DB에 저장되도록 설정되어있습니다.  
+이 부분을 수정하거나 주석 후 사용해야 합니다.
+```java
+@Override
+protected ArrayList<String> doInBackground( String... params){
+	wrdLst.clear();
+	ResultSet reset = null;
+	Connection conn = null;
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		conn = DriverManager.getConnection("jdbc:oracle:thin:@orclelec.cfvmyazpemfk.us-east-1.rds.amazonaws.com:1521:orcl","rywn34","myelectric");
+		Statement stmt = conn.createStatement();
+		reset = stmt.executeQuery(query);
+		while(reset.next()){
+			if ( isCancelled() ) break;
+			final String str = reset.getString(1)+"<1>"+reset.getString(2);
+			wrdLst.add(str);
+		}
+	conn.close();
+	}
+	catch (Exception e) {}
+	return wrdLst;
+}
+```
 
 # Changelog
 
