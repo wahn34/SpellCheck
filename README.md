@@ -32,12 +32,10 @@ SpellCheck는  [네이버 맞춤법검사기][naverlink]의 데이터로 제공�
   교정 대상, 결과 확인
   교정된 이유 확인
 ```
-
-<img src="/images/sit1.jpg" width="180px" height="370px" title="사용1" alt="situation1"></img>
+<img src="/images/main.jpg" width="180px" height="370px" title="메인" alt="main"></img>
 <img src="/images/sit2.jpg" width="180px" height="370px" title="사용2" alt="situation2"></img>
 <img src="/images/history1.jpg" width="180px" height="370px" title="기록1" alt="history1"></img>
-<img src="/images/history2.jpg" width="180px" height="370px" title="기록2" alt="history2"></img>
-<img src="/images/pop.jpg" width="180px" height="370px" title="팝업" alt="pop"></img>
+<img src="/images/pop.jpg" width="180px" height="370px" title="팝업1" alt="pop"></img>
 <br/>
 
 
