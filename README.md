@@ -72,3 +72,5 @@ protected ArrayList<String> doInBackground( String... params){
 
 #### 1.0.0
  + initial commit
+#### 1.0.1
+ + 불필요한 이미지 제거
